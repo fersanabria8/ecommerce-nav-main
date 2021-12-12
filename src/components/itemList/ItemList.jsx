@@ -7,7 +7,7 @@ function ItemList ({productocv}){
   return (
     
     <div id="producto-container">
-      { productocv.map(prod => <Item prod={prod}  /> ) }
+      { productocv.map(prod => <Item  key={prod.id} prod={prod} /> ) }
     </div>
     
   )

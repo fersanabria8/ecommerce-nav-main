@@ -16,7 +16,6 @@ function ItemListContainer () {
 
 useEffect(()=>{
   
-  
   const dbQuery = getFirestore() 
   
   if (categoria) {
@@ -27,14 +26,12 @@ useEffect(()=>{
 
       } else {                
         dbQuery.collection('productos').get() // traer todo
-        .then(data => setProductocv(   data.docs.map(prod => ( { id: prod.id, ...prod.data() } ))   ))
+        .then(data => setProductocv( data.docs.map(prod => ({id: prod.id, ...prod.data()}))   ))
         .catch(err=> console.log(err))
         .finally(()=> setCargando(false))
       }
+},[])
 
-  },[])
-
-console.log('antes del rendering')
 console.log(productocv)
 
   return (

@@ -1,7 +1,7 @@
 import { useState, createContext, useContext } from 'react'
 import React from 'react'
 
-const CartContext= createContext([])
+const CartContext = createContext([])
 
 export const useCartContext =()=> useContext(CartContext)
 

@@ -5,7 +5,7 @@
     "nombre": "Cerveza Temple Rubia",
     "precio" : "$220",
     "stock": "500",
-    "image" : "https://ibb.co/3vCSM9F",
+    "image" : "https://ibb.co/3vCSM9F", // https://i.ibb.co/VxqMQcC/honey1.webp
     "categoria" : "Rubia"
   },
   { 
@@ -13,7 +13,7 @@
     "nombre":"Cerveza Antares Honey",
     "precio":"$220",
     "stock":"150",
-    "image": "https://ibb.co/825MLgG",
+    "image": "https://ibb.co/825MLgG", // https://i.ibb.co/FJw6L4c/honey2.webp
     "categoria" : "Rubia"
   }, 
   { 
@@ -21,7 +21,7 @@
     "nombre":"Cerveza Temple Wolf IPA",
     "precio":"$250",
     "stock":"300",
-    "image": "https://ibb.co/Nns3V8B",
+    "image": "https://ibb.co/Nns3V8B", //https://i.ibb.co/vvHBw7n/ipa1.webp
     "categoria" : "Ipa"
   },
   { 
@@ -29,7 +29,7 @@
     "nombre":"Cerveza Andes Rubia",
     "precio":"$240",
     "stock":"130",
-    "image": "https://ibb.co/Rz5J4W0",
+    "image": "https://ibb.co/Rz5J4W0",//https://i.ibb.co/qkZ2Fws/blonde1.webp
     "categoria" : "Rubia"
   },
   { 
@@ -37,7 +37,7 @@
     "nombre":"Cerveza Andes Roja",
     "precio":"$250",
     "stock":"'300",
-    "image": "https://ibb.co/g6NBXzX",
+    "image": "https://ibb.co/g6NBXzX", //https://i.ibb.co/mSkMY6Y/red1.webp
     "categoria" : "Roja"
   },
   {
@@ -45,7 +45,7 @@
     "nombre":"Cerveza Quilmes Stout",
     "precio":"$250",
     "stock":"300",
-    "image": "https://ibb.co/gM4CrpH",
+    "image": "https://ibb.co/gM4CrpH", // https://i.ibb.co/8DYVmpT/stout1.webp
     "categoria" : "Negra"
   }    
 ]

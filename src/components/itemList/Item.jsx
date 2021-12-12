@@ -6,10 +6,10 @@ import '../css/Item.css'
 function Item ({prod}) {
 return (
     
-      <div className="item card-header card-body" >
+      <div className="item card-header card-body">
         {/* <Link to={`/${prod.categoria}/${prod.id}`}> */}
         <h2 className="item-nombre">{prod.nombre}</h2>
-        <img src={prod.imgUrl} alt="" />
+        <img src={prod.imagenURL} alt="" />
         <Link to={`/detalle/${prod.id}`}>
         <button type="button" className="añadir-carrito-btn"><i className="fas fa-shopping-cart"></i>Añadir al carrito
         </button>

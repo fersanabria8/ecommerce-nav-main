@@ -1,15 +1,14 @@
-// import { useState } from "react";
 import React from 'react';
-import '../css/ItemDetail.css'
 import { useState } from 'react'
 import { useCartContext } from '../context/CartContext'
 import ItemCount from '../itemCount/ItemCount'
+import '../css/ItemDetail.css'
 
 const ItemDetail = ({producto}) => {
 
   const [contador, setContador] = useState(1)
 
-  const { cartList, agregarProducto } = useCartContext()
+  const {cartList, agregarProducto} = useCartContext()
 
 
   function onAddCarrito(cant) {
@@ -27,7 +26,7 @@ const ItemDetail = ({producto}) => {
           <label>{producto.nombre}</label>
         </div>
         <div className="container-detail-img">
-          <img src={producto.imgUrl} alt="fotosss"/>
+          <img src={producto.imagenURL} alt="fotoss"/>
         </div>
         <div className="container-detail-precio">
           <label>{producto.precio}</label>
