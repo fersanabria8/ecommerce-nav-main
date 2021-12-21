@@ -27,11 +27,11 @@ function handleClick() {
 
   return (
     <div>
-      <section>
+      <section className="contador-container">
         <center>
-        <button type='button' onClick={resta}>---</button>
+        <button type='button' onClick={resta}>-</button>
         <label>{contador}</label>
-        <button type='button' onClick={suma}>+++</button>
+        <button type='button' onClick={suma}>+</button>
         </center>
             { condicionBoton && 
             <>

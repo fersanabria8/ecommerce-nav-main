@@ -14,8 +14,7 @@
   overflow: hidden;
   padding: 10px;
   box-shadow: 2px 8px 20px #ddd;
-  transition: 0.5s linear;
-  
+  transition: 0.5s linear;  
 }
 
 .card-body:hover{
@@ -23,7 +22,6 @@
 }
 
 .item .card-header{
-  text-align: center;;
   font-size: 18px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -40,9 +38,7 @@
   max-height: 450px;
   display: block;
   object-fit: cover;
-  /* background-color: green; */
   margin: 0 auto;
-
 }
 .item img:hover{
   opacity: 0.8;
@@ -50,6 +46,8 @@
 
 .item h2{
   color: black;
+  text-align: center;
+  margin-top: 5px;
 }
 
 .añadir-carrito-btn{

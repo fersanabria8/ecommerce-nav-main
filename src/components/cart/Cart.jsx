@@ -63,7 +63,9 @@ function Cart() {
         {idOrden!==''&& <label>El id de su orden es : {idOrden}</label>}
       </section>
       {cartList.map(prod =>  <li key={prod.id}> {prod.nombre} { prod.cantidad}
-      {prod.imgUrl} {prod.stock}</li>)}
+        <img src={prod.imagenURL} />
+      {prod.stock}</li>)}
+      
       {`Precio Total: ${precioTotal()}`}
       <br />
       <button type='button' onClick={() => vaciarCarrito()}>Vaciar Carrito</button> 

@@ -2,7 +2,7 @@
   background-color: turquoise;
   width: 90%;
   margin: 0 auto;
-  height: 550px;
+  height: 450px;
 
 }
 
@@ -16,11 +16,12 @@
 
 .container-detail-img img {
   width: 150px;
-  height: 250px;
+  height: 280px;
+  /* background-color: red; */
   max-height: 450px;
   display: block;
   object-fit: cover;
-  /* margin: 0 auto */
+  /* margin: 0 auto; */
 }
 
 
