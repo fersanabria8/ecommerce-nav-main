@@ -19,19 +19,19 @@ const ItemDetail = ({producto}) => {
 
   return (
     <>
-      <label>DETALLE DE COMPRA</label>
+      {/* <label>DETALLE DE COMPRA</label> */}
       <div className="card-detail">
-      <center> 
+      {/* <center>  */}
         <div className="container-detail">
-          <label>{producto.nombre}</label>
+          <h3>{producto.nombre}</h3>
         </div>
         <div className="container-detail-img">
           <img src={producto.imagenURL} alt="fotoss"/>
         </div>
         <div className="container-detail-precio">
-          <label>{producto.precio}</label>
+          <p>${producto.precio}</p>
         </div>
-      </center>
+      {/* </center> */}
       </div>
       <ItemCount initial={1} stock={5} onAddCarrito={onAddCarrito} />
     </>

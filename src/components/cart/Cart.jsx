@@ -6,27 +6,19 @@ import 'firebase/firestore'
 import { getFirestore } from '../firebase/getFirestore';
 
 
-
-
 function Cart() {
   const [idOrden, setOrden] = useState('')
-  
   const {cartList, vaciarCarrito, precioTotal } = useCartContext()
-
   const generarOrden = (e)=> {
-    e.preventDefault()
-    
+    e.preventDefault()  
     const orden = {}
     orden.date = firebase.firestore.Timestamp.fromDate(new Date());    
-
     orden.buyer = {nombre: 'Fer', email:'f@gmail.com', tel: '12345678'}
     orden.total =  precioTotal()
-
     orden.items = cartList.map(cartItem => {
         const id = cartItem.id
         const nombre = cartItem.id
         const precio = cartItem.id
-
         return {id, nombre, precio}   
     })
 
@@ -38,25 +30,19 @@ function Cart() {
         firebase.firestore.FieldPath.documentId() , 'in', cartList.map(i=> i.id)//[id1, id2....]
     )
     const batch = db.batch();
-    
     itemsToUpdate.get()
-
     .then( collection=>{
         collection.docs.forEach(docSnapshot => {
             batch.update(docSnapshot.ref, {
                 stock: docSnapshot.data().stock - cartList.find(item => item.id === docSnapshot.id).cantidad
             })
         })
-
         batch.commit().then(res =>{
             console.log('Tarea terminada')
         })
     })
 }
-
-
   return (
-
     <div>
       <h3>SOY CARRITO</h3>
       <section>
@@ -65,7 +51,6 @@ function Cart() {
       {cartList.map(prod =>  <li key={prod.id}> {prod.nombre} { prod.cantidad}
         <img src={prod.imagenURL} />
       {prod.stock}</li>)}
-      
       {`Precio Total: ${precioTotal()}`}
       <br />
       <button type='button' onClick={() => vaciarCarrito()}>Vaciar Carrito</button> 

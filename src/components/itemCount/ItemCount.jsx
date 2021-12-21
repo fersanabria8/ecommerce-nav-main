@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import React from 'react';
+import '../css/ItemCount.css'
 
 
 function ItemCount ({initial, onAddCarrito})  {
   const [contador, setContador] = useState(1)
   const [condicionBoton, setCondicionBoton] = useState(false)
-
 
   function suma () { 
   
@@ -29,22 +29,22 @@ function handleClick() {
     <div>
       <section className="contador-container">
         <center>
-        <button type='button' onClick={resta}>-</button>
+        <button type='button' id="resta" onClick={resta}>-</button>
         <label>{contador}</label>
-        <button type='button' onClick={suma}>+</button>
+        <button type='button' id='suma' onClick={suma}>+</button>
         </center>
             { condicionBoton && 
             <>
   
               <Link to='/'>
-                <button>Seguir Comprando</button>
+                <button type='button' id='btnSeguirComprando'>Seguir Comprando</button>
               </Link>
               <Link to='/cart'>
-                <button>Finalizar Compra</button>
+                <button type='button' id='btnfinCompra'>Finalizar Compra</button>
               </Link>
             </>
             } 
-            { !condicionBoton && <button type='button' onClick={handleClick}>Agregar al Carrito desde ItemCount</button>}
+            { !condicionBoton && <button type='button' id='botonAddItemCount' onClick={handleClick}>Agregar al Carrito</button>}
 
       </section>
     </div>

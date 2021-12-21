@@ -1,27 +1,27 @@
 .card-detail{
-  background-color: turquoise;
   width: 90%;
   margin: 0 auto;
-  height: 450px;
-
+  height: 500px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .container-detail{
-  background-color: violet;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  padding-top: 50px;
+  text-align: center;
 }
 
 
 .container-detail-img img {
-  width: 150px;
-  height: 280px;
-  /* background-color: red; */
+  width: 200px;
+  height: 350px;
   max-height: 450px;
-  display: block;
   object-fit: cover;
-  /* margin: 0 auto; */
+  padding-bottom: 10px;
 }
 
-
+.container-detail-precio {
+  font-size: 20px;
+  color: crimson;
+}
