@@ -19,9 +19,7 @@ const ItemDetail = ({producto}) => {
 
   return (
     <>
-      {/* <label>DETALLE DE COMPRA</label> */}
       <div className="card-detail">
-      {/* <center>  */}
         <div className="container-detail">
           <h3>{producto.nombre}</h3>
         </div>
@@ -31,7 +29,6 @@ const ItemDetail = ({producto}) => {
         <div className="container-detail-precio">
           <p>${producto.precio}</p>
         </div>
-      {/* </center> */}
       </div>
       <ItemCount initial={1} stock={5} onAddCarrito={onAddCarrito} />
     </>

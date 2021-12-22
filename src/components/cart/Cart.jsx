@@ -4,6 +4,7 @@ import { useCartContext } from '../context/CartContext'
 import firebase from "firebase";
 import 'firebase/firestore'
 import { getFirestore } from '../firebase/getFirestore';
+import '../css/Cart.css'
 
 
 function Cart() {
