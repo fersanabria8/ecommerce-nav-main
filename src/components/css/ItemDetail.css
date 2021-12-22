@@ -10,6 +10,7 @@
 .container-detail{
   padding-top: 50px;
   text-align: center;
+  letter-spacing: 1.5px;
 }
 
 
@@ -24,4 +25,5 @@
 .container-detail-precio {
   font-size: 20px;
   color: crimson;
+  letter-spacing: 1.5px;
 }

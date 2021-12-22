@@ -44,26 +44,34 @@ function Cart() {
     })
 }
   return (
-    <div>
-      <h3>SOY CARRITO</h3>
+    <div className="container-cart">
       <section>
         {idOrden!==''&& <label>El id de su orden es : {idOrden}</label>}
       </section>
-      {cartList.map(prod =>  <li key={prod.id}> {prod.nombre} { prod.cantidad}
-        <img src={prod.imagenURL} />
-      {prod.stock}</li>)}
-      {`Precio Total: ${precioTotal()}`}
-      <br />
-      <button type='button' onClick={() => vaciarCarrito()}>Vaciar Carrito</button> 
-      <form 
-          onSubmit={generarOrden} 
+      {cartList.map(prod =>
+      <div className='container-cart-nombre' key={prod.id}> 
+        <p>{prod.nombre} x{prod.cantidad}</p>
+      
+        <div className="container-cart-img">
+          <img src={prod.imagenURL}alt="fotos"/>
+        </div>
+      </div>)}
+
+      <div className='container-cart-botones'>
+        <span> 
+          {`Precio Total ${precioTotal()}`}
+        </span>
+        <br />
+        <button type='button' id='btnVaciar' onClick={() => vaciarCarrito()}>Vaciar Carrito</button> 
+        <form onSubmit={generarOrden} 
           // onChange={handleChange} 
-        >
+          >
           {/* <input type='text' name='name' placeholder='name' value={formData.name}/>
           <input type='text' name='phone'placeholder='tel' value={formData.phone}/>
           <input type='email' name='email'placeholder='email' value={formData.email}/>  */}
-          <button>Enviar Orden</button>
-      </form>
+          <button type='button' id='btnEnviarOrden'>Enviar Orden</button>
+        </form>
+      </div> 
 
     </div>
   )
