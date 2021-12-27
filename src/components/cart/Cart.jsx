@@ -56,12 +56,11 @@ function Cart() {
           <img src={prod.imagenURL}alt="fotos"/>
         </div>
       </div>)}
-
+        <br />
       <div className='container-cart-botones'>
         <span> 
           {`Precio Total ${precioTotal()}`}
         </span>
-        <br />
         <button type='button' id='btnVaciar' onClick={() => vaciarCarrito()}>Vaciar Carrito</button> 
         <form onSubmit={generarOrden} 
           // onChange={handleChange} 
@@ -74,6 +73,7 @@ function Cart() {
       </div> 
 
     </div>
+    
   )
 }
 
