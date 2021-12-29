@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { useCartContext } from '../context/CartContext'
 import firebase from "firebase";
 import 'firebase/firestore'
-import { getFirestore } from '../firebase/getFirestore';
+import  getFirestore  from '../firebase/getFirestore';
 import '../css/Cart.css'
 
 
@@ -24,14 +24,16 @@ function Cart() {
     })
 
     const db = getFirestore() //ESto agrega uno nuevo 
-    db.collection('ordenCliente').add(orden)
+    db.collection("ordenClientee").add(orden)
     .then(resp => setOrden(resp.id))
 
     const itemsToUpdate = db.collection('productos').where(
         firebase.firestore.FieldPath.documentId() , 'in', cartList.map(i=> i.id)//[id1, id2....]
     )
     const batch = db.batch();
+
     itemsToUpdate.get()
+
     .then( collection=>{
         collection.docs.forEach(docSnapshot => {
             batch.update(docSnapshot.ref, {
@@ -46,12 +48,13 @@ function Cart() {
   return (
     <div className="container-cart">
       <section>
+        <div className="container-orden">
         {idOrden!==''&& <label>El id de su orden es : {idOrden}</label>}
+        </div>
       </section>
       {cartList.map(prod =>
       <div className='container-cart-nombre' key={prod.id}> 
         <p>{prod.nombre} x{prod.cantidad}</p>
-      
         <div className="container-cart-img">
           <img src={prod.imagenURL}alt="fotos"/>
         </div>
@@ -59,15 +62,17 @@ function Cart() {
         <br />
       <div className='container-cart-botones'>
         <span> 
-          {`Precio Total ${precioTotal()}`}
+          {`Precio Total: $ ${precioTotal()}`}
         </span>
+        <br />
         <button type='button' id='btnVaciar' onClick={() => vaciarCarrito()}>Vaciar Carrito</button> 
         <form onSubmit={generarOrden} 
           // onChange={handleChange} 
           >
-          {/* <input type='text' name='name' placeholder='name' value={formData.name}/>
-          <input type='text' name='phone'placeholder='tel' value={formData.phone}/>
-          <input type='email' name='email'placeholder='email' value={formData.email}/>  */}
+          <input type='text' name='name' placeholder='name' />
+          <input type='text' name='phone'placeholder='tel' />
+          <input type='email' name='email'placeholder='email'/> 
+          <input type='email' name='email'placeholder='validarEmail'/>   
           <button type='button' id='btnEnviarOrden'>Enviar Orden</button>
         </form>
       </div> 

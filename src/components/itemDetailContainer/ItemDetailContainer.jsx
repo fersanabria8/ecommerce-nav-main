@@ -1,7 +1,7 @@
 import React from 'react';
 import {useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom'
-import { getFirestore } from '../firebase/getFirestore';
+import  getFirestore from '../firebase/getFirestore';
 import ItemDetail from './ItemDetail'
 import '../css/ItemDetailContainer.css'
 
@@ -27,7 +27,7 @@ console.log(prod)
     <>
         <div className="detailcontainer-caja">
       {cargando ?
-        <h2>Cargando desde ItemDetailContainer..</h2> :
+        <h2>Cargando...</h2> :
           <ItemDetail  producto={prod} />
         }
         </div>

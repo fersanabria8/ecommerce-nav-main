@@ -41,6 +41,27 @@
   color: firebrick;
 }
 
+form{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: center;
+}
+
+.container-orden{
+  background-color: blue;
+  width: 600px;
+  height: 100px;
+  font-size: 20px;
+}
+.container-orden label{
+  font-size: 18px;
+  background-color: tomato;
+  width: 30px;
+  height: 30px; 
+
+}
+
 #btnVaciar{
   width: 100px;
   font-size: 18px;

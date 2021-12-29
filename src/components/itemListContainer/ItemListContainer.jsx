@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { getFirestore } from '../firebase/getFirestore'
+import  getFirestore  from '../firebase/getFirestore'
 // import { Link } from 'react-router-dom'
 // import {getFetch} from '../data/data'
 import '../css/ItemListContainer.css'
@@ -38,7 +38,7 @@ console.log(productocv)
 
     <>
     {categoria && <h2 className="categoria">Categoria: {categoria}</h2>}
-      {cargando ? <h1>Cargado ItemListContainer</h1> :
+      {cargando ? <h1>Cargado...</h1> :
       <ItemList productocv={productocv}/>
       }
     </>
