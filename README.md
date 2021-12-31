@@ -12,8 +12,10 @@ Careactrísticas!
 Librerías externas a create-react-app
 
    [Fontawesome: v5.15]
-    [Firebase: "8.9.1"] - Libreria de servivios, que nos facilita y permite desarrollar el front-end, sin preocuparnos del back.end. Nos facilita esta solucion altamente desarrollada y probada.
-    [react-router-dom: 6.1.1] - Usado para el sistema de navegacion entre paginas, para que esta funcione como spa.
+   
+   [Firebase: "8.9.1"] - Libreria de servivios, que nos facilita y permite desarrollar el front-end, sin preocuparnos del back.end. Nos facilita esta solucion altamente desarrollada y probada.
+   
+   [react-router-dom: 6.1.1] - Usado para el sistema de navegacion entre paginas, para que esta funcione como spa.
 
 Installation
 
@@ -26,4 +28,4 @@ $ npm install
 
 
 ## Learn More
-MEDIAFIRE Link: https://www.mediafire.com/file/z1xsprijztg9lmh/2021-11-27+18-28-43.mp4/file  
+MEDIAFIRE Link: https://www.mediafire.com/file/106uqlbgl3clucx/2021-12-31+16-40-29.mp4/file
