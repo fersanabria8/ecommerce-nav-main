@@ -6,7 +6,7 @@ import '../css/ItemDetail.css'
 
 const ItemDetail = ({producto}) => {
 
-  const [contador, setContador] = useState(1)
+  const [contador, setContador] = useState(0)
 
   const {cartList, agregarProducto} = useCartContext()
 

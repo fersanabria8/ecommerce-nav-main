@@ -50,8 +50,6 @@ form{
 
 .container-orden{
   background-color: blue;
-  /* width: 200px; */
-  /* height: 100px; */
   font-size: 20px;
   display: flex;
   justify-content: center;
@@ -60,11 +58,6 @@ form{
 .container-orden label{
   font-size: 18px;
   background-color: tomato;
-  /* display: flex; */
-  /* flex-direction: row; */
-  /* flex-wrap: wrap; */
-  /* justify-content: center; */
-
 }
 
 #btnVaciar{

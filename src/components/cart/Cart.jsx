@@ -30,7 +30,8 @@ function Cart() {
     .finally(()=> setFormData({
       name:'',
       tel:'',
-      email:''
+      email:'',
+      direccion:''
     }))
 
     const itemsToUpdate = db.collection('productos').where(
@@ -59,15 +60,11 @@ function Cart() {
     })
   }
 
+
 console.log(formData)
 
   return (
     <div className="container-cart">
-      {/* <section>
-        <div className="container-orden">
-        {idOrden!==''&& <label>El id de su orden es : {idOrden}</label>}
-        </div>
-      </section> */}
       {cartList.map(prod =>
       <div className='container-cart-nombre' key={prod.id}> 
         <p>{prod.nombre} x{prod.cantidad}</p>
@@ -81,17 +78,18 @@ console.log(formData)
           {`Precio Total: $ ${precioTotal()}`}
         </span>
         <br />
-        <button type='button' id='btnVaciar' onClick={() => vaciarCarrito()}>Vaciar Carrito</button> 
+        {/* <button type='button' id='btnVaciar' onClick={() => vaciarCarrito()}>Vaciar Carrito</button>  */}
         <form 
           onSubmit={generarOrden} 
           onChange={handleChange} 
           >
-          <input type='text' name='name' placeholder='name' value={formData.name}/>
-          <input type='text' name='tel' placeholder='tel' value={formData.tel}/>
+          <input type='text' name='name' placeholder='nombre' value={formData.name}/>
+          <input type='text' name='tel' placeholder='telefono' value={formData.tel}/>
           <input type='email' name='email' placeholder='email' value={formData.email}/> 
-          <input type='email' name='email' placeholder='validarEmail'/>   
+          <input type='direccion' name='direccion' placeholder='direccion' value={formData.direccion}/>    
           <button id='btnEnviarOrden'>Enviar Orden</button>
         </form>
+        <button type='button' id='btnVaciar' onClick={() => vaciarCarrito()}>Vaciar Carrito</button>
       </div> 
       <section>
         <div className="container-orden">

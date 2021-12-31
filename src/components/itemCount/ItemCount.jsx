@@ -45,7 +45,6 @@ function handleClick() {
             </>
             } 
             { !condicionBoton && <button id='botonAddItemCount' onClick={handleClick}>Agregar al Carrito</button>}
-
       </section>
     </div>
   )
