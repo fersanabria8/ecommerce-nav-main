@@ -3,7 +3,9 @@ import React from 'react'
 
 const CartContext = createContext()
 
-export const useCartContext =()=> useContext(CartContext)
+export const useCartContext =()=> { 
+  return useContext(CartContext)
+}
 
 
 const CartContextProvider = ({ children }) => {
@@ -26,9 +28,11 @@ const CartContextProvider = ({ children }) => {
   const precioTotal =()=>{
     return cartList.reduce((acum, valor)=>(acum + (valor.cantidad * valor.precio)), 0) 
   }
+
   const cantidadItem = () =>{
     return cartList.reduce( (acum, item)=> acum = acum + item.cantidad , 0)
   }
+
   const borrarItem = (id) => {
     setCartList( cartList.filter(prod => prod.id !== id) )
   }

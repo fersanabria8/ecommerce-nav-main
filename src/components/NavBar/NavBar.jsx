@@ -3,35 +3,27 @@ import Cerrar from '../svg/times-solid.svg'
 import CarritoIcono from '../svg/shopping-cart-solid.svg'
 import React, { Component }  from 'react'
 import { Link } from 'react-router-dom'
+import { useCartContext} from '../context/CartContext'
 import '../css/NavBar.css'
-// import { useCartContext} from '../context/CartContext'
 // import handleClick from '../context/CartContext'
 
-
-export class NavBar extends Component  {
+const NavBar = () =>  {
+ 
   
-  state = {
-    toggle: false
-  }
+ 
   
-  menuToggle = () => {
-    this.setState({toggle: !this.state.toggle})
-  }
-  
-  render() {
-    const {toggle} = this.state;
-
     
+    const { cantidadItem } = useCartContext()
     return (
   <header>
-    <div className="menu" onClick={this.menuToggle}>
+    <div className="menu">
       <img src={Menu} alt="" width="20"/>
     </div>
       <div className="logo">
         <h1><Link to="/">cervezafs</Link></h1>
       </div>
       <nav>
-        <ul className={toggle ? "toggle" : ""}>
+        <ul >
           <li><Link to="/">Inicio </Link></li>
           <li><Link to="/ipa">Ipa</Link></li>
           <li><Link to="/rubia">Rubia</Link></li>
@@ -39,15 +31,15 @@ export class NavBar extends Component  {
           <li><Link to="/negra">Negra</Link></li>
           {/* <li><Link to="/productos/beer">Productos</Link></li> */}
           
-          <li className="cerrar" onClick={this.menuToggle}>
+          <li className="cerrar" >
               <img src={Cerrar} alt="" width="20"/>
           </li>
         </ul>
         <div className="nav-carrito">
-            <span className="cart-length">0
+            <span className="cart-length"> { cantidadItem() !== 0 && cantidadItem() }
             </span>
             <Link to="/cart">
-
+          
               <img src= {CarritoIcono} alt="" width="20"/>
             </Link>
         </div>
@@ -55,5 +47,5 @@ export class NavBar extends Component  {
   </header>
   )
 }
-}
+
 export default NavBar
