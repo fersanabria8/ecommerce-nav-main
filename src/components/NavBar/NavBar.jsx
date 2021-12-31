@@ -4,22 +4,25 @@ import CarritoIcono from '../svg/shopping-cart-solid.svg'
 import React, { Component }  from 'react'
 import { Link } from 'react-router-dom'
 import '../css/NavBar.css'
-import handleClick from '../context/CartContext'
+// import { useCartContext} from '../context/CartContext'
+// import handleClick from '../context/CartContext'
+
 
 export class NavBar extends Component  {
-
+  
   state = {
     toggle: false
   }
   
-
   menuToggle = () => {
     this.setState({toggle: !this.state.toggle})
   }
+  
   render() {
     const {toggle} = this.state;
 
-return (
+    
+    return (
   <header>
     <div className="menu" onClick={this.menuToggle}>
       <img src={Menu} alt="" width="20"/>
@@ -44,6 +47,7 @@ return (
             <span className="cart-length">0
             </span>
             <Link to="/cart">
+
               <img src= {CarritoIcono} alt="" width="20"/>
             </Link>
         </div>

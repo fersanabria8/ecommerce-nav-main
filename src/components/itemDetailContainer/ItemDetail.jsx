@@ -27,10 +27,10 @@ const ItemDetail = ({producto}) => {
           <img src={producto.imagenURL} alt="fotoss"/>
         </div>
         <div className="container-detail-precio">
-          <p>${producto.precio}</p>
+          <p>$ {producto.precio}</p>
         </div>
       </div>
-      <ItemCount initial={1} stock={5} onAddCarrito={onAddCarrito} />
+      <ItemCount initial={1} onAddCarrito={onAddCarrito} />
     </>
   )
 }
