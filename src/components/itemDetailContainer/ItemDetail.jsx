@@ -15,7 +15,6 @@ const ItemDetail = ({producto}) => {
     setContador(cant)
     agregarProducto({...producto, cantidad: cant})
   }
-  console.log(cartList)
 
   return (
     <>

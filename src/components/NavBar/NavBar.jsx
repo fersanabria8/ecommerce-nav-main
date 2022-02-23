@@ -36,7 +36,7 @@ const NavBar = () =>  {
           <li><Link to="/rubia">Rubia</Link></li>
           <li><Link to="/roja">Roja</Link></li>
           <li><Link to="/negra">Negra</Link></li>
-          <li className={abrirMenu ? "cerrar" : "cerrar"} onClick={ToggleMode}  >
+          <li className={abrirMenu ? "cerrar" : "cerrar"} onClick={ToggleMode}>
               <img src={Cerrar} alt="" width="20"/>
           </li>
         </ul>
@@ -44,7 +44,6 @@ const NavBar = () =>  {
             <span className="cart-length"> { cantidadItem() !== 0 && cantidadItem() }
             </span>
             <Link to="/cart">
-          
               <img src= {CarritoIcono} alt="" width="20"/>
             </Link>
         </div>

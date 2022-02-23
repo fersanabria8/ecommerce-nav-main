@@ -60,9 +60,6 @@ function Cart() {
     })
   }
 
-
-console.log(formData)
-
   return (
     <div className="container-cart">
       {cartList.map(prod =>

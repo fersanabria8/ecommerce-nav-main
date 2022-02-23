@@ -22,7 +22,7 @@ const ItemDetailContainer = () => {
     .catch(err => console.log(err))
     .finally(()=> setCargando(false))
   },[])
-console.log(prod)
+
   return (
     <>
         <div className="detailcontainer-caja">

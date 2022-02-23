@@ -30,9 +30,9 @@ useEffect(()=>{
         .catch(err=> console.log(err))
         .finally(()=> setCargando(false))
       }
-},[])
+},[categoria])
 
-console.log(productocv)
+console.log(productocv) // Array vacio
 
   return (
 
